@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            text-align: left;
+            padding: 30px;
+            border: 3px solid darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>About you</h1>
+
+        <form action="/cgi-bin/form_handler.py" method="post">
+            <b>Name: </b><input type="text" name="name">
+            <b>Lastname: </b><input type="text" name="lastname">
+            <br>
+            <br>
+            <b>Gender:</b>
+            <input type="radio" name="gender" value="female"> Woman
+            <input type="radio" name="gender" value="male"> Man
+            <br>
+            <br>
+            <b>Interests:</b>
+            <input type="checkbox" name="painting" value="on"> Painting
+            <input type="checkbox" name="music" value="on"> Music
+            <input type="checkbox" name="dancing" value="on"> Dancing
+            <input type="checkbox" name="photo" value="on"> Photo
+            <input type="checkbox" name="reading" value="on"> Reading
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+</html>
